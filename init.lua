@@ -1,0 +1,5 @@
+require 'list_plugin'
+require 'theme'
+require 'editor'
+require 'autoload_plugin'
+require 'lsp'

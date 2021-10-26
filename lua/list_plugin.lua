@@ -30,6 +30,12 @@ return require('packer').startup(function()
       'hrsh7th/cmp-buffer',
       'hrsh7th/nvim-cmp'
     } 
+    
+    use {
+      'hrsh7th/cmp-vsnip',
+      'hrsh7th/vim-vsnip'
+    }
+
     -- themes
     use 'mangeshrex/uwu.vim'
     use {'rose-pine/neovim', as = 'rose-pine'}

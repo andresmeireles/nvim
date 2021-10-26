@@ -4,12 +4,12 @@ local servers = require('nvim-lsp-installer')
 local cmp = require'cmp'
 
 --require('lsp_signature').setup()
-require 'lspsaga'.init_lsp_saga()
+-- require 'lspsaga'.init_lsp_saga()
 
 cmp.setup({
   snippet = {
     expand = function(args)
-      --vim.fn['vsnip#anonymous'](args.body)
+      vim.fn['vsnip#anonymous'](args.body)
     end
   },
   mapping = {
@@ -32,12 +32,13 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 local on_attach = function(client, bufnr)
 
-  --require'lsp_signature'.on_attach({
-  --    bind = true,
-  --    floating_window = true,
-  --    handler_opts = {border = "single"},
-  --    hint_enable = false
-  --})
+  require'lsp_signature'.setup()
+  require'lsp_signature'.on_attach({
+      bind = true,
+      floating_window = true,
+      handler_opts = {border = "single"},
+      hint_enable = false
+  })
 
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end 
@@ -71,10 +72,7 @@ end
 servers.on_server_ready(function(server)
   local opts = {
     on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {
-      debounce_text_changes = 150,
-    }
+    capabilities = capabilities, 
   }
 
   server:setup(opts)

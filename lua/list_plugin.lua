@@ -4,38 +4,31 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-
     use '9mm/vim-closer'
-
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } 
-
     use {
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
-
     --lsp
     use {
       'neovim/nvim-lspconfig',
       'williamboman/nvim-lsp-installer'
     }
     use 'ray-x/lsp_signature.nvim'
-
     use 'glepnir/lspsaga.nvim'
-
-    use 'ms-jpq/coq_nvim' 
-
     use { 
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-buffer',
       'hrsh7th/nvim-cmp'
-    } 
-    
+    }
     use {
       'hrsh7th/cmp-vsnip',
       'hrsh7th/vim-vsnip'
     }
-
+    -- lint
+    --use 'mfussenegger/nvim-lint'
+    use 'mattn/efm-langserver'
     -- themes
     use 'mangeshrex/uwu.vim'
     use {'rose-pine/neovim', as = 'rose-pine'}

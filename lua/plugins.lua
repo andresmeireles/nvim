@@ -11,10 +11,7 @@ return require('packer').startup(function()
       requires = { {'nvim-lua/plenary.nvim'} }
     }
     --lsp
-    use {
-      'neovim/nvim-lspconfig',
-      'williamboman/nvim-lsp-installer'
-    }
+    use 'neovim/nvim-lspconfig'
     use 'ray-x/lsp_signature.nvim'
     use 'glepnir/lspsaga.nvim'
     -- autocomple
@@ -54,6 +51,9 @@ return require('packer').startup(function()
     use 'b3nj5m1n/kommentary'
     -- icons
     use 'kyazdani42/nvim-web-devicons'
+    -- PROGRAMING
+    -- lint
+    use 'dense-analysis/ale'
     -- themes
     use 'mangeshrex/uwu.vim'
     use {'rose-pine/neovim', as = 'rose-pine'}

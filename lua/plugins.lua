@@ -17,18 +17,43 @@ return require('packer').startup(function()
     }
     use 'ray-x/lsp_signature.nvim'
     use 'glepnir/lspsaga.nvim'
-    use { 
-      'hrsh7th/cmp-nvim-lsp',
-      'hrsh7th/cmp-buffer',
-      'hrsh7th/nvim-cmp'
-    }
+    -- autocomple
+    use { 'ms-jpq/coq_nvim', branch = "coq"}
+    use {'ms-jpq/coq.artifacts', branch = "artifacts"}
+    -- registers
+    use "tversteeg/registers.nvim"
+    -- statusline
+    use 'nvim-lualine/lualine.nvim'
+    -- file manager
+    use 'kyazdani42/nvim-tree.lua'
+    -- utils
     use {
-      'hrsh7th/cmp-vsnip',
-      'hrsh7th/vim-vsnip'
+        "blackCauldron7/surround.nvim", config = function()
+          require"surround".setup {mappings_style = "sandwich"}
+        end
     }
-    -- lint
-    --use 'mfussenegger/nvim-lint'
-    use 'mattn/efm-langserver'
+    -- git
+    use {
+      'lewis6991/gitsigns.nvim',
+      requires = {
+        'nvim-lua/plenary.nvim'
+      }
+    }
+    use 'f-person/git-blame.nvim'
+    -- indent line
+    use "lukas-reineke/indent-blankline.nvim"
+    -- todo highlight
+    use {
+      "folke/todo-comments.nvim",
+      requires = "nvim-lua/plenary.nvim",
+      config = function()
+        require("todo-comments").setup {}
+      end
+    }
+    -- commentary
+    use 'b3nj5m1n/kommentary'
+    -- icons
+    use 'kyazdani42/nvim-web-devicons'
     -- themes
     use 'mangeshrex/uwu.vim'
     use {'rose-pine/neovim', as = 'rose-pine'}

@@ -1,34 +1,8 @@
--- local lsp = require'lspconfig'
-local servers = require('nvim-lsp-installer')
--- local coq = require('coq')
-local cmp = require'cmp'
-
---require('lsp_signature').setup()
--- require 'lspsaga'.init_lsp_saga()
-
-cmp.setup({
-  snippet = {
-    expand = function(args)
-      vim.fn['vsnip#anonymous'](args.body)
-    end
-  },
-  mapping = {
-    ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-f>'] = cmp.mapping.scroll_docs(4),
-    ['<C-Space>'] = cmp.mapping.complete(),
-    ['<C-e>'] = cmp.mapping.close(),
-    ['<C-y>'] = cmp.config.disable, -- If you want to remove the default `<C-y>` mapping, You can specify `cmp.config.disable` value.
-    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-  },
-  sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' },
-  }, {
-    { name = 'buffer' },
-  })
-})
-
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local g = vim.g
+local lsp = require'lspconfig'
+local lsp_servers = require "lsp.autoload"
+g.coq_settings = {auto_start = 'shut-up'}
+local coq = require 'coq'
 
 local on_attach = function(client, bufnr)
 
@@ -69,13 +43,12 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-servers.on_server_ready(function(server)
-  local opts = {
-    on_attach = on_attach,
-    capabilities = capabilities, 
-  }
-
-  server:setup(opts)
-  vim.cmd[[ do User LspAttachBuffers ]]
-end)
-
+for _, server in ipairs(lsp_servers) do
+  lsp[server].setup(coq.lsp_ensure_capabilities({
+        on_attach = on_attach,
+        flags = {
+            debounce_text_changes = 150,
+        }
+    })
+  )
+end

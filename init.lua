@@ -1,5 +1,6 @@
-require 'list_plugin'
+require 'plugins'
 require 'theme'
 require 'editor'
-require 'autoload_plugin'
+require 'plugins_autoload'
 require 'lsp'
+require 'lsp.autoload'

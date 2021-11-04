@@ -5,7 +5,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
     use '9mm/vim-closer'
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } 
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use {
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
@@ -23,12 +23,16 @@ return require('packer').startup(function()
     use 'nvim-lualine/lualine.nvim'
     -- file manager
     use 'kyazdani42/nvim-tree.lua'
-    -- utils
+    -- surround
     use {
         "blackCauldron7/surround.nvim", config = function()
           require"surround".setup {mappings_style = "sandwich"}
         end
     }
+    -- autosave
+    use "Pocco81/AutoSave.nvim"
+    -- spellcheck
+    use 'kamykn/spelunker.vim'
     -- git
     use {
       'lewis6991/gitsigns.nvim',
@@ -54,6 +58,7 @@ return require('packer').startup(function()
     -- PROGRAMING
     -- lint
     use 'dense-analysis/ale'
+    -- END PROGRAMING
     -- themes
     use 'mangeshrex/uwu.vim'
     use {'rose-pine/neovim', as = 'rose-pine'}

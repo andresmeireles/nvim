@@ -24,6 +24,8 @@ return require('packer').startup(function()
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-vsnip'
     use 'hrsh7th/vim-vsnip'
+   -- use 'SirVer/ultisnips'
+    --use 'quangnguyen30192/cmp-nvim-ultisnips'
     -- registers
     use "tversteeg/registers.nvim"
     -- statusline
@@ -39,8 +41,8 @@ return require('packer').startup(function()
     -- autosave
     use "Pocco81/AutoSave.nvim"
     -- spellcheck TODO corrigir melhor o português
-    use 'kamykn/spelunker.vim'
-    use 'kamykn/popup-menu.nvim' -- esse pacote é muito grande e problematico é melhor que ele seja instaldo separadamente.
+    -- use 'kamykn/spelunker.vim'
+    -- use 'kamykn/popup-menu.nvim' -- esse pacote é muito grande e problemático é melhor que ele seja instalado separadamente.
     --use 'lewis6991/spellsitter.nvim'
     -- git
     use {

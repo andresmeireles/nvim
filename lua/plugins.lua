@@ -15,8 +15,15 @@ return require('packer').startup(function()
     use 'ray-x/lsp_signature.nvim'
     use 'glepnir/lspsaga.nvim'
     -- autocomple
-    use { 'ms-jpq/coq_nvim', branch = "coq"}
-    use {'ms-jpq/coq.artifacts', branch = "artifacts"}
+    -- use { 'ms-jpq/coq_nvim', branch = "coq"}
+    --  use {'ms-jpq/coq.artifacts', branch = "artifacts"}
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-vsnip'
+    use 'hrsh7th/vim-vsnip'
     -- registers
     use "tversteeg/registers.nvim"
     -- statusline

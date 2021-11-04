@@ -40,6 +40,8 @@ return require('packer').startup(function()
     use "Pocco81/AutoSave.nvim"
     -- spellcheck
     use 'kamykn/spelunker.vim'
+    use 'kamykn/popup-menu.nvim'
+    --use 'lewis6991/spellsitter.nvim'
     -- git
     use {
       'lewis6991/gitsigns.nvim',

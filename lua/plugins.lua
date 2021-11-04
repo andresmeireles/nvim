@@ -38,9 +38,9 @@ return require('packer').startup(function()
     }
     -- autosave
     use "Pocco81/AutoSave.nvim"
-    -- spellcheck
+    -- spellcheck TODO corrigir melhor o português
     use 'kamykn/spelunker.vim'
-    use 'kamykn/popup-menu.nvim'
+    use 'kamykn/popup-menu.nvim' -- esse pacote é muito grande e problematico é melhor que ele seja instaldo separadamente.
     --use 'lewis6991/spellsitter.nvim'
     -- git
     use {

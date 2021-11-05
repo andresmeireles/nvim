@@ -41,6 +41,7 @@ return require('packer').startup(function()
     -- autosave
     use "Pocco81/AutoSave.nvim"
     -- spellcheck TODO corrigir melhor o português
+    use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts:"}
     -- use 'kamykn/spelunker.vim'
     -- use 'kamykn/popup-menu.nvim' -- esse pacote é muito grande e problemático é melhor que ele seja instalado separadamente.
     --use 'lewis6991/spellsitter.nvim'

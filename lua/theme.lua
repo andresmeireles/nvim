@@ -18,7 +18,9 @@ colorscheme dracula
 ]]
 
 -- one dark
--- require('onedark').setup()
+--vim.g.onedark_style = 'deep'
+--vim.g.onedark_italic_comment = false
+--require('onedark').setup()
 
 -- omni
 -- vim.cmd('colorscheme omni')
@@ -27,7 +29,7 @@ colorscheme dracula
 --vim.cmd[[
 -- set termguicolors
 -- syntax enable
---colorscheme OceanicNext
+-- colorscheme OceanicNext
 --]]
 
 -- tokyonight
@@ -39,5 +41,5 @@ colorscheme dracula
 -- material
 -- require('material').set()
 
--- neon 
+-- neon
 -- vim.cmd[[colorscheme neon]]

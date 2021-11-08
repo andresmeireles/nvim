@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "/home/andremeireles/.local/share/nvim/site/pack/packer/start/cmp-vsnip",
     url = "https://github.com/hrsh7th/cmp-vsnip"
   },
+  ["coc.nvim"] = {
+    loaded = true,
+    path = "/home/andremeireles/.local/share/nvim/site/pack/packer/start/coc.nvim",
+    url = "https://github.com/neoclide/coc.nvim"
+  },
   dracula = {
     loaded = true,
     path = "/home/andremeireles/.local/share/nvim/site/pack/packer/start/dracula",
@@ -210,6 +215,13 @@ _G.packer_plugins = {
     path = "/home/andremeireles/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  phpactor = {
+    loaded = false,
+    needs_bufread = true,
+    only_cond = false,
+    path = "/home/andremeireles/.local/share/nvim/site/pack/packer/opt/phpactor",
+    url = "https://github.com/phpactor/phpactor"
+  },
   ["plenary.nvim"] = {
     loaded = true,
     path = "/home/andremeireles/.local/share/nvim/site/pack/packer/start/plenary.nvim",
@@ -224,11 +236,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/andremeireles/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
-  },
-  ["spellsitter.nvim"] = {
-    loaded = true,
-    path = "/home/andremeireles/.local/share/nvim/site/pack/packer/start/spellsitter.nvim",
-    url = "https://github.com/lewis6991/spellsitter.nvim"
   },
   ["surround.nvim"] = {
     config = { "\27LJ\2\2U\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\19mappings_style\rsandwich\nsetup\rsurround\frequire\0" },
@@ -287,6 +294,13 @@ time([[Config for nvim-hybrid]], false)
 time([[Config for todo-comments.nvim]], true)
 try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
 time([[Config for todo-comments.nvim]], false)
+vim.cmd [[augroup packer_load_aucmds]]
+vim.cmd [[au!]]
+  -- Filetype lazy-loads
+time([[Defining lazy-load filetype autocommands]], true)
+vim.cmd [[au FileType php ++once lua require("packer.load")({'phpactor'}, { ft = "php" }, _G.packer_plugins)]]
+time([[Defining lazy-load filetype autocommands]], false)
+vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
 end)

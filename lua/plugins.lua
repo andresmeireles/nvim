@@ -1,10 +1,8 @@
+local fn = vim.fn
 vim.cmd [[packadd packer.nvim]]
-
--- vim._update_package_paths()
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use '9mm/vim-closer'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use {
       'nvim-telescope/telescope.nvim',
@@ -70,6 +68,12 @@ return require('packer').startup(function()
     -- PROGRAMING
     -- lint
     use 'dense-analysis/ale'
+    -- phpactor
+    if (fn.executable('composer') == 1) then
+      use { 'phpactor/phpactor', ft = {'php'},  run = 'composer install --no-dev -o' }
+    else
+      print('to use some plugins you must install php composer')
+    end
     -- END PROGRAMING
     -- themes
     use 'mangeshrex/uwu.vim'

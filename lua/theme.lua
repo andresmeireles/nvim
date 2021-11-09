@@ -13,8 +13,8 @@
 
 -- dracula
 vim.cmd[[
-syntax enable
-colorscheme dracula
+ syntax enable
+ colorscheme dracula
 ]]
 
 -- one dark

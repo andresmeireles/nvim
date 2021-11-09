@@ -4,3 +4,5 @@ require 'editor'
 require 'plugins_autoload'
 require 'lsp'
 require 'lsp.autoload'
+
+print(vim.bo.filetype)

@@ -1,8 +1,8 @@
 local g = vim.g
 local lsp = require'lspconfig'
 local lsp_servers = require "lsp.autoload"
--- g.coq_settings = {auto_start = 'shut-up'}
--- local coq = require 'coq'
+--g.coq_settings = {auto_start = 'shut-up'}
+--local coq = require 'coq'
 
 local cmp = require "cmp"
 cmp.setup({
@@ -79,7 +79,7 @@ end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 for _, server in ipairs(lsp_servers) do
-  -- lsp[server].setup(coq.lsp_ensure_capabilities({
+  --lsp[server].setup(coq.lsp_ensure_capabilities({
   lsp[server].setup {
         on_attach = on_attach,
         flags = {
@@ -87,4 +87,5 @@ for _, server in ipairs(lsp_servers) do
         },
         capabilities = capabilities
   }
+  --}))
 end

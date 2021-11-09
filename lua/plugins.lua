@@ -13,8 +13,8 @@ return require('packer').startup(function()
     use 'ray-x/lsp_signature.nvim'
     use 'glepnir/lspsaga.nvim'
     -- autocomple
-    -- use { 'ms-jpq/coq_nvim', branch = "coq"}
-    --  use {'ms-jpq/coq.artifacts', branch = "artifacts"}
+    --[[ use { 'ms-jpq/coq_nvim', branch = "coq"}
+    use {'ms-jpq/coq.artifacts', branch = "artifacts"} ]]
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
@@ -26,6 +26,8 @@ return require('packer').startup(function()
     --use 'quangnguyen30192/cmp-nvim-ultisnips'
     -- registers
     use "tversteeg/registers.nvim"
+    -- undotree
+    use 'mbbill/undotree'
     -- statusline
     use 'nvim-lualine/lualine.nvim'
     -- file manager
@@ -39,7 +41,7 @@ return require('packer').startup(function()
     -- autosave
     use "Pocco81/AutoSave.nvim"
     -- spellcheck TODO corrigir melhor o português
-    use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts:"}
+    use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts"}
     -- use 'kamykn/spelunker.vim'
     -- use 'kamykn/popup-menu.nvim' -- esse pacote é muito grande e problemático é melhor que ele seja instalado separadamente.
     --use 'lewis6991/spellsitter.nvim'
@@ -68,12 +70,13 @@ return require('packer').startup(function()
     -- PROGRAMING
     -- lint
     use 'dense-analysis/ale'
+    -- doge - documentantion
+    use {'kkoomen/vim-doge', run = ':call doge#install()'}
+    -- test
+    use 'vim-test/vim-test'
+    -- php
     -- phpactor
-    if (fn.executable('composer') == 1) then
-      use { 'phpactor/phpactor', ft = {'php'},  run = 'composer install --no-dev -o' }
-    else
-      print('to use some plugins you must install php composer')
-    end
+    use { 'phpactor/phpactor',  run = 'composer install --no-dev -o' }
     -- END PROGRAMING
     -- themes
     use 'mangeshrex/uwu.vim'
@@ -82,7 +85,6 @@ return require('packer').startup(function()
     use {"dracula/vim", as = "dracula"}
     use 'navarasu/onedark.nvim'
     use 'yonlu/omni.vim'
-    use {'PHSix/nvim-hybrid', config = function() require('hybrid') end }
     use 'mhartington/oceanic-next'
     use 'folke/tokyonight.nvim'
     use 'bluz71/vim-moonfly-colors'

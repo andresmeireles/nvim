@@ -5,4 +5,5 @@ require 'plugins_autoload'
 require 'lsp'
 require 'lsp.autoload'
 
-print(vim.bo.filetype)
+local file = vim.cmd [[ echo @% ]]
+print(file)

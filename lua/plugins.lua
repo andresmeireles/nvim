@@ -32,6 +32,12 @@ return require('packer').startup(function()
     use 'nvim-lualine/lualine.nvim'
     -- file manager
     use 'kyazdani42/nvim-tree.lua'
+    --use {'ms-jpq/chadtree', branch = 'chad', run = "python3 -m chadtree deps" }
+    -- tabline
+    use {
+      'romgrk/barbar.nvim',
+      requires = {'kyazdani42/nvim-web-devicons'}
+    }
     -- surround
     use {
         "blackCauldron7/surround.nvim", config = function()

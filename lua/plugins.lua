@@ -8,6 +8,8 @@ return require('packer').startup(function()
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+    -- autopairs
+    use 'windwp/nvim-autopairs'
     --lsp
     use 'neovim/nvim-lspconfig'
     use 'ray-x/lsp_signature.nvim'
@@ -38,12 +40,13 @@ return require('packer').startup(function()
       'romgrk/barbar.nvim',
       requires = {'kyazdani42/nvim-web-devicons'}
     }
+    -- buffer
+    use 'famiu/bufdelete.nvim'
+    -- hop
+    use 'phaazon/hop.nvim'
     -- surround
-    use {
-        "blackCauldron7/surround.nvim", config = function()
-          require"surround".setup {mappings_style = "sandwich"}
-        end
-    }
+    --use "blackCauldron7/surround.nvim"
+    use 'tpope/vim-surround'
     -- autosave
     use "Pocco81/AutoSave.nvim"
     -- spellcheck TODO corrigir melhor o português

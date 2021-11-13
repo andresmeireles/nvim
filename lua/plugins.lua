@@ -8,6 +8,11 @@ return require('packer').startup(function()
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+    -- dashboard
+    use {
+      'goolord/alpha-nvim',
+      requires = { 'kyazdani42/nvim-web-devicons' }
+    }
     -- autopairs
     use 'windwp/nvim-autopairs'
     --lsp

@@ -15,6 +15,17 @@ function increase()
   end
 end
 
+function decrease()
+  local file = vim.fn.expand('%')
+  if file == "NvimTree" then
+    size = size - 10
+    local cmd = ":vertical res " .. size
+    vim.cmd(cmd)
+  end
+end
+
 api.nvim_set_keymap('n', "<C-b>", '<cmd>:lua require"plugins_config.tree".toggle()<CR>', options)
 
+api.nvim_set_keymap('n', '=', ':lua increase()<CR>', options)
 api.nvim_set_keymap('n', '+', ':lua increase()<CR>', options)
+api.nvim_set_keymap('n', '-', ':lua decrease()<CR>', options)

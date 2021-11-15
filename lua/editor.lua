@@ -7,6 +7,6 @@ vim.opt.softtabstop   = 4
 vim.opt.expandtab     = true
 
 -- identation
-vim.bo.autoindent  = true
+vim.opt.autoindent  = true
 --vim.bo.smartindent = true
-vim.bo.copyindent  = true
+--vim.bo.copyindent  = true

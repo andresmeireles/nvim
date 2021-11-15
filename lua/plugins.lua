@@ -48,7 +48,7 @@ return require('packer').startup(function()
     -- buffer
     use 'famiu/bufdelete.nvim'
     -- hop
-    use 'phaazon/hop.nvim'
+    -- use 'phaazon/hop.nvim'
     -- surround
     --use "blackCauldron7/surround.nvim"
     use 'tpope/vim-surround'

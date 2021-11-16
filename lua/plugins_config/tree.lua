@@ -4,7 +4,6 @@ local g = vim.g
 g.nvim_tree_width = 30
 local tree_width = g.nvim_tree_width
 tree.toggle = function()
-    print('is toggle now')
     require('nvim-tree').toggle()
     if require('nvim-tree.view').win_open() then
         require('bufferline.state').set_offset(tree_width + 1, 'FileTree')

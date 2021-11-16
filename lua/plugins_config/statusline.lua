@@ -3,7 +3,12 @@ local options = {noremap = true, silent = true}
 local size = 30
 
 require "nvim-tree".setup {
-  auto_close = true
+  auto_close = true,
+  sections = {
+    lualine_c = {
+        'lsp_progress'
+    }
+  }
 }
 
 function increase()

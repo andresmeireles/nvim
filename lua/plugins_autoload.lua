@@ -1,7 +1,7 @@
 require('plugins_config.treesitter')
 require "plugins_config.lualine"
 require "plugins_config.indentline"
-require "plugins_config.luatree"
+require "plugins_config.statusline"
 require "plugins_config.ale_linters"
 require "plugins_config.ale_fixers"
 require "plugins_config.autosave"
@@ -13,3 +13,4 @@ require "plugins_config.tree"
 --require "plugins_config.hop"
 require "plugins_config.dashboard"
 require "plugins_config.autopairs"
+require "plugins_config.trouble"

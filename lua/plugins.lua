@@ -19,6 +19,7 @@ return require('packer').startup(function()
     use 'neovim/nvim-lspconfig'
     use 'ray-x/lsp_signature.nvim'
     use 'glepnir/lspsaga.nvim'
+    use { "folke/trouble.nvim", requires = 'kyazdani42/nvim-web-devicons' }
     -- autocomple
     --[[ use { 'ms-jpq/coq_nvim', branch = "coq"}
     use {'ms-jpq/coq.artifacts', branch = "artifacts"} ]]
@@ -37,6 +38,7 @@ return require('packer').startup(function()
     use 'mbbill/undotree'
     -- statusline
     use 'nvim-lualine/lualine.nvim'
+    use 'arkav/lualine-lsp-progress'
     -- file manager
     use 'kyazdani42/nvim-tree.lua'
     --use {'ms-jpq/chadtree', branch = 'chad', run = "python3 -m chadtree deps" }

@@ -18,8 +18,8 @@ return require('packer').startup(function()
     --lsp
     use 'neovim/nvim-lspconfig'
     use 'ray-x/lsp_signature.nvim'
-    use 'glepnir/lspsaga.nvim'
-    use { "folke/trouble.nvim", requires = 'kyazdani42/nvim-web-devicons' }
+    --use 'glepnir/lspsaga.nvim'
+    --use { "folke/trouble.nvim", requires = 'kyazdani42/nvim-web-devicons' }
     -- autocomple
     --[[ use { 'ms-jpq/coq_nvim', branch = "coq"}
     use {'ms-jpq/coq.artifacts', branch = "artifacts"} ]]
@@ -71,6 +71,8 @@ return require('packer').startup(function()
       }
     }
     use 'f-person/git-blame.nvim'
+    -- better escape
+    use 'max397574/better-escape.nvim'
     -- indent line
     use "lukas-reineke/indent-blankline.nvim"
     -- todo highlight

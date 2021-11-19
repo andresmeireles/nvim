@@ -3,7 +3,7 @@ local options = {noremap = true, silent = true}
 local size = 30
 local tree_cb = require"nvim-tree.config".nvim_tree_callback
 local list = {
-    { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("edit") },
+  { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("edit") },
   { key = {"<2-RightMouse>", "<C-]>"},    cb = tree_cb("cd") },
   { key = "<C-v>",                        cb = tree_cb("vsplit") },
   { key = "<C-x>",                        cb = tree_cb("split") },
@@ -67,6 +67,7 @@ function decrease()
 end
 
 api.nvim_set_keymap('n', "<C-b>", '<cmd>:lua require"plugins_config.tree".toggle()<CR>', options)
+api.nvim_set_keymap('i', "<C-b>", '<esc><cmd>:lua require"plugins_config.tree".toggle()<CR>', options)
 
 api.nvim_set_keymap('n', '=', ':lua increase()<CR>', options)
 api.nvim_set_keymap('n', '+', ':lua increase()<CR>', options)

@@ -41,6 +41,8 @@ return require('packer').startup(function()
     -- statusline
     use 'nvim-lualine/lualine.nvim'
     use 'arkav/lualine-lsp-progress'
+    -- cursorline
+    use 'yamatsum/nvim-cursorline'
     -- file manager
     use 'kyazdani42/nvim-tree.lua'
     --use {'ms-jpq/chadtree', branch = 'chad', run = "python3 -m chadtree deps" }
@@ -52,17 +54,15 @@ return require('packer').startup(function()
     -- buffer
     use 'famiu/bufdelete.nvim'
     -- hop
-    -- use 'phaazon/hop.nvim'
+    use 'phaazon/hop.nvim'
     -- surround
     --use "blackCauldron7/surround.nvim"
     use 'tpope/vim-surround'
     -- autosave
-    use "Pocco81/AutoSave.nvim"
+    --use "Pocco81/AutoSave.nvim"
+    use '907th/vim-auto-save'
     -- spellcheck TODO corrigir melhor o português
-    use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts"}
-    -- use 'kamykn/spelunker.vim'
-    -- use 'kamykn/popup-menu.nvim' -- esse pacote é muito grande e problemático é melhor que ele seja instalado separadamente.
-    --use 'lewis6991/spellsitter.nvim'
+    use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts"} 
     -- git
     use {
       'lewis6991/gitsigns.nvim',
@@ -99,15 +99,5 @@ return require('packer').startup(function()
     use { 'phpactor/phpactor', ft = 'php',  run = 'composer install --no-dev -o' }
     -- END PROGRAMING
     -- themes
-    use 'mangeshrex/uwu.vim'
-    use {'rose-pine/neovim', as = 'rose-pine'}
-    use "projekt0n/github-nvim-theme"
-    use {"dracula/vim", as = "dracula"}
-    use 'navarasu/onedark.nvim'
-    use 'yonlu/omni.vim'
-    use 'mhartington/oceanic-next'
-    use 'folke/tokyonight.nvim'
-    use 'bluz71/vim-moonfly-colors'
-    use 'marko-cerovac/material.nvim'
-    use "rafamadriz/neon"
+    use {"dracula/vim", as = "dracula"} 
 end)

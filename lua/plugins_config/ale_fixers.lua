@@ -2,7 +2,7 @@
 local g = vim.g
 local fixers = {}
 
-fixers["*"] = {"trim_whitespace"}
+fixers["*"] = {}
 
 g.ale_fix_on_save = 1
-g.ale_fixers = fixers
+g.ale_fixers = fixers 

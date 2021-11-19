@@ -18,3 +18,5 @@ vim.g.cursorword_highlight = false
 
 -- mouse support
 vim.opt.mouse = 'a'
+
+

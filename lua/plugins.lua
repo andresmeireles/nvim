@@ -100,4 +100,6 @@ return require('packer').startup(function()
     -- END PROGRAMING
     -- themes
     use {"dracula/vim", as = "dracula"} 
+    use 'sainnhe/sonokai'
+    use 'sainnhe/gruvbox-material' 
 end)

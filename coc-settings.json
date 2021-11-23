@@ -1,5 +1,9 @@
 {
   "cSpell.language": "en,pt_BR",
   "cSpellExt.enableDictionaries": ["portuguese-brazilian"],
-  "cSpell.words": []
+  "cSpell.words": [],
+  "cSpell.userWords": [
+    "Laravel",
+    "odontosystem"
+  ]
 }

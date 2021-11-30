@@ -1,12 +1,10 @@
 local g = vim.g
 local lsp = require'lspconfig'
 local lsp_servers = require "lsp.autoload"
-local autopairs = require "nvim-autopairs.completion.cmp"
-g.coq_settings = {auto_start = 'shut-up'}
-local coq = require 'coq'
+--g.coq_settings = {auto_start = 'shut-up'}
+--local coq = require 'coq'
+local cmp = require "cmp"
 
---[[ local cmp = require "cmp"
-cmp.event:on( 'confirm_done', autopairs.on_confirm_done({  map_char = { tex = '' } }))
 cmp.setup({
     snippet = {
       -- REQUIRED - you must specify a snippet engine
@@ -38,7 +36,7 @@ cmp.setup({
     }, {
       { name = 'buffer' },
     })
-}) ]]
+})
 
 local on_attach = function(client, bufnr)
 
@@ -82,13 +80,13 @@ end
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 for _, server in ipairs(lsp_servers) do
-  lsp[server].setup(coq.lsp_ensure_capabilities({
-    --lsp[server].setup {
+  --lsp[server].setup(coq.lsp_ensure_capabilities({
+    lsp[server].setup {
         on_attach = on_attach,
         flags = {
             debounce_text_changes = 150,
         },
-      --  capabilities = capabilities
-    --}
-    }))
+        capabilities = capabilities
+    }
+    --}))
 end

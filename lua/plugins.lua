@@ -14,7 +14,8 @@ return require('packer').startup(function()
       requires = { 'kyazdani42/nvim-web-devicons' }
     }
     -- autopairs
-    use 'windwp/nvim-autopairs'
+    --use 'windwp/nvim-autopairs'
+    use 'jiangmiao/auto-pairs'
     --lsp
     use 'neovim/nvim-lspconfig'
     use 'ray-x/lsp_signature.nvim'

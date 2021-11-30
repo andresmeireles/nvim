@@ -1,4 +1,6 @@
 {
+    "suggest.autoTrigger": "none",
+    "suggest.timeout": 1, 
   "cSpell.language": "en,pt_BR",
   "cSpellExt.enableDictionaries": ["portuguese-brazilian"],
   "cSpell.words": [],

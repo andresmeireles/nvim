@@ -21,8 +21,8 @@ return require('packer').startup(function()
     --use 'glepnir/lspsaga.nvim'
     --use { "folke/trouble.nvim", requires = 'kyazdani42/nvim-web-devicons' }
     -- autocomple
-    --[[ use { 'ms-jpq/coq_nvim', branch = "coq"}
-    use {'ms-jpq/coq.artifacts', branch = "artifacts"} ]]
+    use { 'ms-jpq/coq_nvim', branch = "coq"}
+    use {'ms-jpq/coq.artifacts', branch = "artifacts"}
     use {
         'hrsh7th/cmp-nvim-lsp',
         require = {

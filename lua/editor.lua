@@ -19,4 +19,8 @@ vim.g.cursorword_highlight = false
 -- mouse support
 vim.opt.mouse = 'a'
 
+-- global clipboard
+local options = {noremap = true, silent = true} 
+vim.api.nvim_set_keymap('n', "<leader>Y", '"+yg_', options)
+vim.api.nvim_set_keymap('v', "<leader>Y", '"+yg_', options)
 

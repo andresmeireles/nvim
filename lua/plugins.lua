@@ -14,8 +14,8 @@ return require('packer').startup(function()
       requires = { 'kyazdani42/nvim-web-devicons' }
     }
     -- autopairs
-    --use 'windwp/nvim-autopairs'
-    use 'jiangmiao/auto-pairs'
+    use 'windwp/nvim-autopairs'
+    -- use 'jiangmiao/auto-pairs'
     --lsp
     use 'neovim/nvim-lspconfig'
     use 'ray-x/lsp_signature.nvim'
@@ -88,6 +88,8 @@ return require('packer').startup(function()
     use 'b3nj5m1n/kommentary'
     -- icons
     use 'kyazdani42/nvim-web-devicons'
+    -- terminal
+    use "akinsho/toggleterm.nvim"
     -- PROGRAMING
     -- lint
     use 'dense-analysis/ale'

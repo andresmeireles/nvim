@@ -1,9 +1,13 @@
 local g = vim.g
 local lsp = require'lspconfig'
 local lsp_servers = require "lsp.autoload"
+local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+require('nvim-autopairs').setup{}
 --g.coq_settings = {auto_start = 'shut-up'}
 --local coq = require 'coq'
 local cmp = require "cmp"
+
+cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
 
 cmp.setup({
     snippet = {

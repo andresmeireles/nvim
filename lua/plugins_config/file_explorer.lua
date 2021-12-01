@@ -1,6 +1,6 @@
 local api = vim.api
 local options = {noremap = true, silent = true}
-local size = 30
+local size = 40
 local tree_cb = require"nvim-tree.config".nvim_tree_callback
 local list = {
   { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("edit") },
@@ -40,7 +40,7 @@ local list = {
 require "nvim-tree".setup {
   auto_close = true,
   view = {
-    width = 30,
+    width = 40,
     mappings = {
         custom_only = true,
         list = list

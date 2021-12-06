@@ -62,8 +62,8 @@ return require('packer').startup(function()
     -- autosave
     --use "Pocco81/AutoSave.nvim"
     use '907th/vim-auto-save'
-    -- spellcheck TODO corrigir melhor o português
-    use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts"} 
+    -- spellcheck && lint (for now)
+    use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts @yaegassy/coc-phpstan coc-psalm"} 
     -- git
     use {
       'lewis6991/gitsigns.nvim',
@@ -92,7 +92,7 @@ return require('packer').startup(function()
     use "akinsho/toggleterm.nvim"
     -- PROGRAMING
     -- lint
-    use 'dense-analysis/ale'
+    --use 'dense-analysis/ale'
     -- doge - documentantion
     use {'kkoomen/vim-doge', run = ':call doge#install()'}
     -- test

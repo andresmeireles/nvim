@@ -92,7 +92,7 @@ return require('packer').startup(function()
     use "akinsho/toggleterm.nvim"
     -- PROGRAMING
     -- lint
-    --use 'dense-analysis/ale'
+    use 'dense-analysis/ale'
     -- doge - documentantion
     use {'kkoomen/vim-doge', run = ':call doge#install()'}
     -- test

@@ -19,6 +19,10 @@ return require('packer').startup(function()
     --lsp
     use 'neovim/nvim-lspconfig'
     use 'ray-x/lsp_signature.nvim'
+    use {
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons"
+    }
     --use 'glepnir/lspsaga.nvim'
     --use { "folke/trouble.nvim", requires = 'kyazdani42/nvim-web-devicons' }
     -- autocomple
@@ -35,6 +39,8 @@ return require('packer').startup(function()
             use 'saadparwaiz1/cmp_luasnip'
         }
     }
+    -- scrollbar
+    use 'petertriho/nvim-scrollbar'
     -- registers
     use "tversteeg/registers.nvim"
     -- undotree

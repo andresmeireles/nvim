@@ -2,6 +2,8 @@ local g = vim.g
 local lsp = require'lspconfig'
 local lsp_servers = require "lsp.autoload"
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+require('trouble').setup()
+
 require('nvim-autopairs').setup{}
 --g.coq_settings = {auto_start = 'shut-up'}
 --local coq = require 'coq'

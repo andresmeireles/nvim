@@ -1,7 +1,7 @@
 vim.cmd[[syntax on]]
 
 -- dracula
---vim.cmd[[ colorscheme dracula]]
+vim.cmd[[ colorscheme dracula]]
 
 -- gruvbox material
 --vim.cmd [[
@@ -12,10 +12,10 @@ vim.cmd[[syntax on]]
 --]]
 
 -- sonokai
-vim.cmd[[
-    let g:sonokai_style = 'andromeda'
-    let g:sonokai_enable_italic = 1
-    let g:sonokai_disable_italic_comment = 0
-    colorscheme sonokai
-]]
+--vim.cmd[[
+--    let g:sonokai_style = 'andromeda'
+--    let g:sonokai_enable_italic = 1
+--    let g:sonokai_disable_italic_comment = 0
+--    colorscheme sonokai
+--]]
 

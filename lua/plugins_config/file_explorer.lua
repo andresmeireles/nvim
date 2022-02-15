@@ -1,6 +1,5 @@
 local api = vim.api
 local options = {noremap = true, silent = true}
-local size = 40
 local tree_cb = require"nvim-tree.config".nvim_tree_callback
 local list = {
   { key = {"<CR>", "o", "<2-LeftMouse>"}, cb = tree_cb("edit") },
@@ -37,8 +36,7 @@ local list = {
   { key = "g?",                           cb = tree_cb("toggle_help") },
 }
 
-require "nvim-tree".setup {
-  auto_close = true,
+require "nvim-tree".setup { 
   view = {
     width = 40,
     mappings = {
@@ -66,8 +64,10 @@ function decrease()
   end
 end
 
-api.nvim_set_keymap('n', "<C-b>", '<cmd>:lua require"plugins_config.tree".toggle()<CR>', options)
-api.nvim_set_keymap('i', "<C-b>", '<esc><cmd>:lua require"plugins_config.tree".toggle()<CR>', options)
+--api.nvim_set_keymap('n', "<C-b>", '<cmd>:lua require"plugins_config.tree".toggle()<CR>', options)
+--api.nvim_set_keymap('i', "<C-b>", '<esc><cmd>:lua require"plugins_config.tree".toggle()<CR>', options)
+api.nvim_set_keymap('n', "<C-b>", ':NvimTreeToggle<CR>', options)
+api.nvim_set_keymap('i', "<C-b>", ':NvimTreeToggle<CR>', options)
 
 api.nvim_set_keymap('n', '=', ':lua increase()<CR>', options)
 api.nvim_set_keymap('n', '+', ':lua increase()<CR>', options)

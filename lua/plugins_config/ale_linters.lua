@@ -3,7 +3,7 @@ local linters = {}
 local igored_linters = {}
 
 igored_linters = {'cspell'}
-linters["php"] = {"phpstan", "psalm"}
+linters["php"] = {"phpstan", "psalm", "phpmd"}
 
 -- PHP LINTERS
 -- PHPSTAN

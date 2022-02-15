@@ -3,16 +3,21 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
+    -- treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use { 'romgrk/nvim-treesitter-context', run = ':TSContextEnable' }
     use {
       'nvim-telescope/telescope.nvim',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+    -- per project settings
+    use 'windwp/nvim-projectconfig' 
     -- dashboard
-    use {
-      'goolord/alpha-nvim',
-      requires = { 'kyazdani42/nvim-web-devicons' }
-    }
+    --use {
+    --  'goolord/alpha-nvim',
+    --  requires = { 'kyazdani42/nvim-web-devicons' }
+    --}
+    use 'glepnir/dashboard-nvim'
     -- autopairs
     use 'windwp/nvim-autopairs'
     -- use 'jiangmiao/auto-pairs'
@@ -23,11 +28,7 @@ return require('packer').startup(function()
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons"
     }
-    --use 'glepnir/lspsaga.nvim'
-    --use { "folke/trouble.nvim", requires = 'kyazdani42/nvim-web-devicons' }
     -- autocomple
-    use { 'ms-jpq/coq_nvim', branch = "coq"}
-    use {'ms-jpq/coq.artifacts', branch = "artifacts"}
     use {
         'hrsh7th/cmp-nvim-lsp',
         require = {
@@ -52,24 +53,24 @@ return require('packer').startup(function()
     use 'yamatsum/nvim-cursorline'
     -- file manager
     use 'kyazdani42/nvim-tree.lua'
-    --use {'ms-jpq/chadtree', branch = 'chad', run = "python3 -m chadtree deps" }
     -- tabline
-    use {
+    use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+    --[[ use {
       'romgrk/barbar.nvim',
       requires = {'kyazdani42/nvim-web-devicons'}
-    }
+    } ]]
     -- buffer
     use 'famiu/bufdelete.nvim'
     -- hop
     use 'phaazon/hop.nvim'
     -- surround
-    --use "blackCauldron7/surround.nvim"
     use 'tpope/vim-surround'
     -- autosave
-    --use "Pocco81/AutoSave.nvim"
     use '907th/vim-auto-save'
     -- spellcheck && lint (for now)
-    use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts @yaegassy/coc-phpstan coc-psalm"} 
+    use 'dense-analysis/ale'
+    --use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts @yaegassy/coc-phpstan coc-psalm"} 
+    use { 'neoclide/coc.nvim', branch = 'release', run = ":CocInstall coc-spell-checker coc-cspell-dicts"}
     -- git
     use {
       'lewis6991/gitsigns.nvim',
@@ -97,8 +98,6 @@ return require('packer').startup(function()
     -- terminal
     use "akinsho/toggleterm.nvim"
     -- PROGRAMING
-    -- lint
-    use 'dense-analysis/ale'
     -- doge - documentantion
     use {'kkoomen/vim-doge', run = ':call doge#install()'}
     -- test

@@ -20,6 +20,15 @@ local servers = {
     }
 }
 
+require "neodev".setup {
+    library = {
+	plugins = {
+	    "nvim-dap-ui"
+	},
+	types = true
+    }
+}
+
 local mason_lspconfig = require("mason-lspconfig")
 
 mason_lspconfig.setup {

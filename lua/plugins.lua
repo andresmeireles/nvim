@@ -81,6 +81,14 @@ return {
 
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 
+	{
+		"rcarriga/nvim-dap-ui",
+		dependencies = {
+			"mfussenegger/nvim-dap",
+			"folke/neodev.nvim",
+		}
+	},
+
 	-- COLOR SCHEMES
 	"rebelot/kanagawa.nvim"
 }

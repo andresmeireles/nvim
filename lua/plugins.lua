@@ -1,0 +1,84 @@
+return {
+	{ "folke/which-key.nvim" },
+
+	{
+		"nvim-tree/nvim-tree.lua",
+		dependecies = {
+			"nvim-tree/nvim-tree-devicons"
+		},
+	},
+
+	"tpope/vim-sleuth",
+
+	{ "m4xshen/autoclose.nvim", opts = {} },
+
+	{ "tpope/vim-surround" },
+
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		opts = {}
+	},
+
+	{
+		"neovim/nvim-lspconfig",
+		dependencies = {
+			{ 'williamboman/mason.nvim',           opts = {} },
+			{ 'williamboman/mason-lspconfig.nvim', opts = {} },
+			{ "j-hui/fidget.nvim",                 tag = "legacy", opts = {} },
+			{ "folke/neodev.nvim",                 opts = {} }
+		},
+	},
+
+	{
+		-- Autocompletion
+		'hrsh7th/nvim-cmp',
+		dependencies = {
+			-- Snippet Engine & its associated nvim-cmp source
+			'L3MON4D3/LuaSnip',
+			'saadparwaiz1/cmp_luasnip',
+
+			-- Adds LSP completion capabilities
+			'hrsh7th/cmp-nvim-lsp',
+
+			-- Adds a number of user-friendly snippets
+			'rafamadriz/friendly-snippets',
+		},
+	},
+
+	"nvimtools/none-ls.nvim",
+
+	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
+
+	'nvim-lualine/lualine.nvim',
+
+	{
+		'nvim-treesitter/nvim-treesitter',
+		dependencies = {
+			'nvim-treesitter/nvim-treesitter-textobjects',
+		},
+		build = ':TSUpdate',
+	},
+
+	-- TELESCOPE
+	{
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.4",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		}
+	},
+
+	{
+		"LukasPietzschmann/telescope-tabs",
+		config = function ()
+			require'telescope-tabs'.setup {}
+		end,
+		opts = {}
+	},
+
+	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+
+	-- COLOR SCHEMES
+	"rebelot/kanagawa.nvim"
+}

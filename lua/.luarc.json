@@ -1,0 +1,24 @@
+{
+    "workspace.library": [
+        "/home/wbj-000089/.local/share/nvim/lazy/neodev.nvim/types/nightly",
+        "/usr/share/nvim/runtime/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/mason.nvim/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/nvim-lspconfig/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/nvim-cmp/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/which-key.nvim/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/indent-blankline.nvim/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/lualine.nvim/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/fidget.nvim/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/nvim-treesitter-textobjects/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/cmp_luasnip/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/nvim-tree.lua/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/mason-lspconfig.nvim/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/lazy.nvim/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/nvim-treesitter/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/cmp-nvim-lsp/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/neodev.nvim/lua",
+        "/home/wbj-000089/.local/share/nvim/lazy/LuaSnip/lua",
+        "/home/wbj-000089/.config/nvim/lua",
+        "${3rd}/luv/library"
+    ]
+}

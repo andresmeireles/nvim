@@ -2,8 +2,8 @@ require 'bufferline'.setup {
 	options = {
 		offsets = {
 			{
-				filetype = "NvimTree",
-				text = "Nvim Tree",
+				filetype = "neo-tree",
+				text = "Neo Tree",
 				separator = true,
 				text_align = "left"
 			}

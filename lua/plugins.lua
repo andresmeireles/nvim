@@ -1,13 +1,15 @@
 return {
 	{ "folke/which-key.nvim" },
 
-	{
-		"nvim-tree/nvim-tree.lua",
-		dependecies = {
-			"nvim-tree/nvim-tree-devicons"
-		},
-	},
-
+{
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+},
 	"tpope/vim-sleuth",
 
 	{ "m4xshen/autoclose.nvim", opts = {} },

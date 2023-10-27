@@ -1,6 +1,6 @@
 require('lualine').setup {
   options = {
-    disabled_filetypes = { "NvimTree" },
+    disabled_filetypes = { "neo-tree" },
     -- theme = bubbles_theme,
     component_separators = '|',
     section_separators = { left = '', right = '' },

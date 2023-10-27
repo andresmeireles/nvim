@@ -2,7 +2,7 @@
 require("which-key").register {
     ["<leader>"] = {
 	w = { "<cmd>w<cr>", "save file" },
-	e = { "<cmd>NvimTreeToggle<cr>", "Toggle File Explorer" },
+	e = { "<cmd>Neotree toggle<cr>", "Toggle File Explorer" },
 	T = { "Telescope" },
 	Tf = { "<cmd>Telescope fd<cr>" , "Find" },
 	l = { "LSP" },

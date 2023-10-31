@@ -1,11 +1,26 @@
 local on_attach = function(_, bufnr)
-    local namap = function(keys, func, desc)
+    local telescope_builtin = require "telescope.builtin"
+
+    local nmap = function(keys, func, desc)
 	if desc then
 	    desc = "LSP: " .. desc
 	end
 
 	vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
     end
+
+    nmap("gr", vim.lsp.buf.rename, "Rename")
+    nmap("ga", vim.lsp.buf.code_action, "Code Action")
+
+    nmap("gk", vim.lsp.buf.hover, "Hover documentation")
+    nmap("gK", vim.lsp.buf.signature_help, "Signature Help")
+
+    nmap("gd", telescope_builtin.lsp_definitions, 'Go to definition')
+    nmap("gR", telescope_builtin.lsp_references, "Go to references")
+    nmap("gi", telescope_builtin.lsp_implementations, "Go to implementations")
+    nmap("gD", telescope_builtin.lsp_tyle_definitions, "Type definitions")
+    nmap("gs", telescope_builtin.lsp_document_symbols, "Document Symbols")
+    nmap("gw", telescope_builtin.lsp_workspace_symbols, "Workspace symbols")
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

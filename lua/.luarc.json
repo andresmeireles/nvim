@@ -19,6 +19,7 @@
         "/home/wbj-000089/.local/share/nvim/lazy/neodev.nvim/lua",
         "/home/wbj-000089/.local/share/nvim/lazy/LuaSnip/lua",
         "/home/wbj-000089/.config/nvim/lua",
+        "${3rd}/luv/library",
         "${3rd}/luv/library"
     ]
 }

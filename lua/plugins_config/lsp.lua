@@ -18,7 +18,7 @@ local on_attach = function(_, bufnr)
     nmap("gd", telescope_builtin.lsp_definitions, 'Go to definition')
     nmap("gR", telescope_builtin.lsp_references, "Go to references")
     nmap("gi", telescope_builtin.lsp_implementations, "Go to implementations")
-    nmap("gD", telescope_builtin.lsp_tyle_definitions, "Type definitions")
+    nmap("gD", telescope_builtin.lsp_type_definitions, "Type definitions")
     nmap("gs", telescope_builtin.lsp_document_symbols, "Document Symbols")
     nmap("gw", telescope_builtin.lsp_workspace_symbols, "Workspace symbols")
 end

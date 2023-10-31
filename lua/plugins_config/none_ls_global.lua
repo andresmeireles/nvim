@@ -1,7 +1,5 @@
-local helper = require 'plugins_config.none_ls_utils'
+local helper = require 'plugins_config.none_ls_helper'
 local nullls = helper.null_ls
-
-local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 nullls.setup({
 	on_attach = function (client, bufnr)

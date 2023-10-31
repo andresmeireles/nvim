@@ -1,20 +1,23 @@
 return {
-	{ "folke/which-key.nvim" },
+	"folke/which-key.nvim",
 
-{
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-      "MunifTanjim/nui.nvim",
-    }
-},
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v3.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		}
+	},
+
 	"tpope/vim-sleuth",
 
 	{ "m4xshen/autoclose.nvim", opts = {} },
 
-	{ "tpope/vim-surround" },
+	"lewis6991/gitsigns.nvim",
+
+	"tpope/vim-surround",
 
 	{
 		"folke/trouble.nvim",
@@ -69,14 +72,6 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		}
-	},
-
-	{
-		"LukasPietzschmann/telescope-tabs",
-		config = function ()
-			require'telescope-tabs'.setup {}
-		end,
-		opts = {}
 	},
 
 	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },

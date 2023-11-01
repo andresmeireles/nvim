@@ -1,19 +1,30 @@
 return {
-	"folke/which-key.nvim",
+	{ 'akinsho/toggleterm.nvim', version = "*", config = true },
 
 	{
-		"nvim-neo-tree/neo-tree.nvim",
-		branch = "v3.x",
+		"nvim-tree/nvim-tree.lua",
 		dependencies = {
-			"nvim-lua/plenary.nvim",
-			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-			"MunifTanjim/nui.nvim",
-		}
+			"nvim-tree/nvim-web-devicons"
+		},
 	},
+
+	"folke/which-key.nvim",
+
+	-- {
+	-- 	"nvim-neo-tree/neo-tree.nvim",
+	-- 	branch = "v3.x",
+	-- 	dependencies = {
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+	-- 		"MunifTanjim/nui.nvim",
+	-- 	}
+	-- },
+
+	'famiu/bufdelete.nvim',
 
 	"tpope/vim-sleuth",
 
-	{ "m4xshen/autoclose.nvim", opts = {} },
+	{ "m4xshen/autoclose.nvim",  opts = {} },
 
 	"lewis6991/gitsigns.nvim",
 
@@ -53,7 +64,7 @@ return {
 
 	"nvimtools/none-ls.nvim",
 
-	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
+	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl',  opts = {} },
 
 	'nvim-lualine/lualine.nvim',
 
@@ -74,7 +85,7 @@ return {
 		}
 	},
 
-	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{ "akinsho/bufferline.nvim",             version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 
 	{
 		"rcarriga/nvim-dap-ui",
@@ -82,6 +93,35 @@ return {
 			"mfussenegger/nvim-dap",
 			"folke/neodev.nvim",
 		}
+	},
+
+	{
+		"nvim-neotest/neotest",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"antoinemadec/FixCursorHold.nvim",
+			-- ADAPTERS
+			"haydenmeade/neotest-jest"
+		}
+	},
+
+	-- COMMENTARIES
+	{
+		"folke/todo-comments.nvim",
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {}
+	},
+
+	{
+		"danymat/neogen",
+		dependencies = "nvim-treesitter/nvim-treesitter",
+		config = true,
+	},
+
+	{
+		"numToStr/Comment.nvim",
+		opts = {},
+		lazy = false,
 	},
 
 	-- COLOR SCHEMES

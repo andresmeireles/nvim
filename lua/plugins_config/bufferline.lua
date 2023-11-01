@@ -1,8 +1,9 @@
 require 'bufferline'.setup {
 	options = {
+		close_command = "Bdelete",
 		offsets = {
 			{
-				filetype = "neo-tree",
+				filetype = "NvimTree",
 				text = "File Explorer",
 				separator = true,
 				text_align = "left"

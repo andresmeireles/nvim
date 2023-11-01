@@ -8,3 +8,24 @@ require "neo-tree".setup {
 		},
 	}
 }
+
+local au = vim.api.nvim_create_augroup("CLOSE_IF_ONLY_OPEN", {})
+
+vim.api.nvim_create_autocmd("BufDelete", {
+	group = au,
+	pattern = "*",
+	callback = function()
+		local open_bufs = #vim.fn.getbufinfo({ buflisted = 1 })
+
+		for _, v in pairs(vim.fn.getbufinfo()) do
+			print(v)
+			for _, i in pairs(v) do
+				print(i)
+			end
+		end
+
+		if open_bufs == 0 then
+			vim.cmd("qa")
+		end
+	end
+})

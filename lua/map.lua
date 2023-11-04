@@ -4,7 +4,8 @@ require("which-key").register {
 		c = { "<cmd>Bdelete<cr>", "close buffer" },
 		w = { "<cmd>w<cr>", "save file" },
 		q = { "<cmd>q<cr>", "close editor" },
-		e = { "<cmd>NvimTreeToggle<cr>", "Toggle File Explorer" },
+		e = { "<cmd>Neotree toggle<cr>", "Toggle File Explorer" },
+		-- e = { "<cmd>NvimTreeToggle<cr>", "Toggle File Explorer" },
 		t = {
 			name = "-> Terminal",
 			t = { "<cmd>ToggleTerm<cr>", "bottom" },
@@ -23,5 +24,11 @@ require("which-key").register {
 			K = { gk, "Hover documentation" },
 			k = { gK, "Signature help" }
 		},
+		G = {
+			name = "-> GIT",
+			b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "toggle inline blame" },
+			u = { "<cmd>Gitsigns reset_hunk<cr>", "undo alteration" },
+			l = { "<cmd>LazyGit<cr>", "lazygit" },
+		}
 	},
 }

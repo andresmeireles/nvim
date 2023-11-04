@@ -24,7 +24,7 @@ vim.o.secure = true
 vim.o.cmdheight = 0
 
 -- search hightlight on search
-vim.o.hlsearch = false
+-- vim.o.hlsearch = false
 
 vim.o.breakindent = true
 

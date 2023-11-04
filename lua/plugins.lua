@@ -25,6 +25,8 @@ return {
 
 	"tpope/vim-sleuth",
 
+	{ "m-demare/hlargs.nvim",    opts = {} },
+
 	{ "m4xshen/autoclose.nvim",  opts = {} },
 
 	"lewis6991/gitsigns.nvim",
@@ -84,6 +86,16 @@ return {
 		build = ':TSUpdate',
 	},
 
+	{ 'echasnovski/mini.cursorword',         version = '*', opts = {} },
+
+	{
+		'nvimdev/hlsearch.nvim',
+		event = 'BufRead',
+		config = function()
+			require("hlsearch").setup()
+		end
+	},
+
 	-- TELESCOPE
 	{
 		"nvim-telescope/telescope.nvim",
@@ -93,7 +105,7 @@ return {
 		}
 	},
 
-	{ "akinsho/bufferline.nvim",             version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 
 	{
 		"rcarriga/nvim-dap-ui",
@@ -133,5 +145,9 @@ return {
 	},
 
 	-- COLOR SCHEMES
-	"rebelot/kanagawa.nvim"
+	"rebelot/kanagawa.nvim",
+
+	"folke/tokyonight.nvim",
+
+	"sainnhe/gruvbox-material"
 }

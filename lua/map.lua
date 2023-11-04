@@ -11,6 +11,7 @@ require("which-key").register {
 			t = { "<cmd>ToggleTerm<cr>", "bottom" },
 			f = { "<cmd>ToggleTerm direction=float<cr>", "floating" }
 		},
+		H = { "<cmd>lua require('hlargs').toggle()<cr>", "highlight args" },
 		T = { "-> Telescope" },
 		Tf = { "<cmd>Telescope fd<cr>", "Find" },
 		lt = { "<cmd>TroubleToggle<cr>", "Show diagnostics" },

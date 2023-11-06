@@ -8,7 +8,12 @@ nmap("<C-Right>", "<cmd>lua require('smart-splits').resize_right()<cr>")
 -- which key maps
 require("which-key").register {
 	["<leader>"] = {
-		c = { "<cmd>Bdelete<cr>", "close buffer" },
+		b = {
+			name = "buffers",
+			c = { "<cmd>Bdelete<cr>", "close buffer" },
+			n = { "<cmd>BufferLineCycleNext<cr>", "next" },
+			b = { "<cmd>BufferLineCyclePrev<cr>", "previous" }
+		},
 		w = { "<cmd>w<cr>", "save file" },
 		q = { "<cmd>q<cr>", "close editor" },
 		e = { "<cmd>Neotree toggle<cr>", "Toggle File Explorer" },

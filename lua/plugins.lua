@@ -74,6 +74,8 @@ return {
 
 	"nvimtools/none-ls.nvim",
 
+	"davidmh/cspell.nvim",
+
 	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl',  opts = {} },
 
 	'nvim-lualine/lualine.nvim',
@@ -86,7 +88,16 @@ return {
 		build = ':TSUpdate',
 	},
 
-	{ 'echasnovski/mini.cursorword',         version = '*', opts = {} },
+	{
+		"echasnovski/mini.cursorword",
+		version = '*',
+		opts = {}
+	},
+
+	{
+		"NvChad/nvim-colorizer.lua",
+		opts = {}
+	},
 
 	{
 		'nvimdev/hlsearch.nvim',
@@ -94,6 +105,11 @@ return {
 		config = function()
 			require("hlsearch").setup()
 		end
+	},
+
+	{
+		"petertriho/nvim-scrollbar",
+		opts = {}
 	},
 
 	-- TELESCOPE
@@ -105,7 +121,7 @@ return {
 		}
 	},
 
-	{ "akinsho/bufferline.nvim", version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{ "akinsho/bufferline.nvim",             version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
 
 	{
 		"rcarriga/nvim-dap-ui",

@@ -32,6 +32,9 @@ local servers = {
 			workspace = { checkThirdParty = false },
 			telemetry = { enable = false }
 		}
+	},
+	cspell = {
+		filetypes = { "lua" }
 	}
 }
 

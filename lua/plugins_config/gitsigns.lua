@@ -33,3 +33,5 @@ require('gitsigns').setup {
 		end, { expr = true, buffer = bufnr, desc = 'Jump to previous hunk' })
 	end,
 }
+
+require("scrollbar.handlers.gitsigns").setup()

@@ -1,3 +1,10 @@
+local nmap = function(map, command)
+	vim.keymap.set("n", map, command, {})
+end
+
+nmap("<C-Left>", "<cmd>lua require('smart-splits').resize_left()<cr>")
+nmap("<C-Right>", "<cmd>lua require('smart-splits').resize_right()<cr>")
+
 -- which key maps
 require("which-key").register {
 	["<leader>"] = {

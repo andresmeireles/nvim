@@ -19,6 +19,8 @@ return {
 		}
 	},
 
+	"mrjones2014/smart-splits.nvim",
+
 	"folke/which-key.nvim",
 
 	'famiu/bufdelete.nvim',

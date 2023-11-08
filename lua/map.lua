@@ -4,6 +4,8 @@ end
 
 nmap("<C-Left>", "<cmd>lua require('smart-splits').resize_left()<cr>")
 nmap("<C-Right>", "<cmd>lua require('smart-splits').resize_right()<cr>")
+nmap("<C-h>", "<cmd>lua require('smart-splits').resize_left()<cr>")
+nmap("<C-l>", "<cmd>lua require('smart-splits').resize_right()<cr>")
 
 -- which key maps
 require("which-key").register {
@@ -15,7 +17,11 @@ require("which-key").register {
 			n = { "<cmd>BufferLineCycleNext<cr>", "next" },
 			b = { "<cmd>BufferLineCyclePrev<cr>", "previous" }
 		},
-		w = { "<cmd>w<cr>", "save file" },
+		n = {
+			name = "Test runner / comments",
+			r = { "<cmd>Neotest run<cr>", "Run unit test" }
+		},
+		w = { "<cmd>silent w<cr>", "save file" },
 		q = { "<cmd>q<cr>", "close editor" },
 		e = { "<cmd>Neotree toggle<cr>", "Toggle File Explorer" },
 		-- e = { "<cmd>NvimTreeToggle<cr>", "Toggle File Explorer" },

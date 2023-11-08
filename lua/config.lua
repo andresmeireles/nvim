@@ -32,9 +32,6 @@ vim.o.breakindent = true
 vim.o.ignorecase = true
 vim.o.smartcase = true
 
--- colorscheme
-vim.cmd("colorscheme kanagawa-wave")
-
 -- cursor line
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = false

@@ -167,5 +167,5 @@ return {
 
 	"folke/tokyonight.nvim",
 
-	"sainnhe/gruvbox-material"
+	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 }
 }

@@ -8,6 +8,7 @@ nmap("<C-Right>", "<cmd>lua require('smart-splits').resize_right()<cr>")
 -- which key maps
 require("which-key").register {
 	["<leader>"] = {
+		c = { "<cmd>Bdelete<cr>", "close buffer" },
 		b = {
 			name = "buffers",
 			c = { "<cmd>Bdelete<cr>", "close buffer" },

@@ -24,6 +24,7 @@ require("which-key").register {
 		w = { "<cmd>silent w<cr>", "save file" },
 		q = { "<cmd>q<cr>", "close editor" },
 		e = { "<cmd>Neotree toggle<cr>", "Toggle File Explorer" },
+		f = { "<cmd>Neotree reveal_file=%:p<cr>", "Focus on explorer" },
 		-- e = { "<cmd>NvimTreeToggle<cr>", "Toggle File Explorer" },
 		t = {
 			name = "-> Terminal",

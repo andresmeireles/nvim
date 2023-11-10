@@ -33,9 +33,7 @@ local servers = {
 			telemetry = { enable = false }
 		}
 	},
-	cspell = {
-		filetypes = { "lua" }
-	}
+
 }
 
 local mason_lspconfig = require("mason-lspconfig")

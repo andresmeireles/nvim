@@ -8,3 +8,4 @@ require "plugins_config.neo_tree"
 -- require "plugins_config.nvim_tree"
 require "plugins_config.gitsigns"
 require "plugins_config.neotest"
+require "plugins_config.ufo" -- must always be after lsp

@@ -16,18 +16,14 @@ require("lint").linters_by_ft = {
 }
 ```
 
-<!-- ## Adicionar fomatadores
+## Adicionar fomatadores
 
-Para adicionar um formatador especifico sao necessarios passos extras.
+Uso o `conform.nvim` para adicionar formatadores, sua aplicacao é bastante similar a adicionar linters.
+
+No arquivo '.nvim.lua' adicione o seguinte
 
 ```
-local nls = require "plugins_config.none_ls_helper"
-local formatter_helper = require "plugins_config.formatter_helper"
-local formatter = nls.diagnostics
-
-nls.register(formatter.NOME_DO_FORMATTER)
-
-formatter_heper.enable = true
-formatter_helper.add_format("EXTENSAO_DO_ARQUIVO")
-formatter_helper.setup()
-``` -->
+require("conform").formatters_by_ft = {
+    extensao_do_arquivo = {formatadores}
+}
+```

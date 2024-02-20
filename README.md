@@ -2,22 +2,21 @@
 
 ## Customizacoes por projeto
 
-Minha configuracao tem o expr habilitado, entao um arquivo .nvim.lua na raiz do projeto pode ser usado para adicionar configuracoes adicionais.
+Minha configuração tem o expr habilitado, então um arquivo `.nvim.lua` na raiz do projeto pode ser usado para adicionar configurações adicionais.
 
 ## Adicionar linters
 
-Para adicionar um linter especifico adicione ao arquivo .nvim.lua na raiz do projeto.
-
-Minha configuracao usar o none_ls (replace do null_ls como mecanismo de linter)
+Uso o `nvim_lint` para executar linters a configuração de cada linter pode ser feita no arquivo `.nvim.lua`
 
 ```
-local nls = require "plugins_config.none_ls_helper"
-local diagnostics = nls.diagnostics
-
-nls.register(diagnostics.NOME_DO_LINTER)
+require("lint").linters_by_ft = {
+    php = {"phpcs", "linter_qualquer"},
+    go = {"linters_do_go"},
+    ....
+}
 ```
 
-## Adicionar fomatadores
+<!-- ## Adicionar fomatadores
 
 Para adicionar um formatador especifico sao necessarios passos extras.
 
@@ -31,4 +30,4 @@ nls.register(formatter.NOME_DO_FORMATTER)
 formatter_heper.enable = true
 formatter_helper.add_format("EXTENSAO_DO_ARQUIVO")
 formatter_helper.setup()
-```
+``` -->

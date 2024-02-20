@@ -24,13 +24,13 @@ vim.o.secure = true
 vim.o.cmdheight = 0
 
 -- search hightlight on search
--- vim.o.hlsearch = false
+vim.o.hlsearch = false
 
 vim.o.breakindent = true
 
 -- actions on search
-vim.o.ignorecase = true
-vim.o.smartcase = true
+-- vim.o.ignorecase = true
+-- vim.o.smartcase = true
 
 -- cursor line
 vim.opt.cursorline = true

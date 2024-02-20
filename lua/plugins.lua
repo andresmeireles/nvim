@@ -1,3 +1,5 @@
+local themes = require('themes')
+
 return {
 	{ 'akinsho/toggleterm.nvim', version = "*", config = true },
 
@@ -95,11 +97,14 @@ return {
 		},
 	},
 
-	"nvimtools/none-ls.nvim",
+	-- "nvimtools/none-ls.nvim",
+	{ 'stevearc/conform.nvim', opts = {} },
+
+	{ 'mfussenegger/nvim-lint' },
 
 	"davidmh/cspell.nvim",
 
-	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl',  opts = {} },
+	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
 
 	'nvim-lualine/lualine.nvim',
 
@@ -144,7 +149,11 @@ return {
 		}
 	},
 
-	{ "akinsho/bufferline.nvim",             version = "*", dependencies = "nvim-tree/nvim-web-devicons" },
+	{
+		"akinsho/bufferline.nvim",
+		version = "*",
+		dependencies = "nvim-tree/nvim-web-devicons"
+	},
 
 	{
 		"rcarriga/nvim-dap-ui",
@@ -183,8 +192,10 @@ return {
 		lazy = false,
 	},
 
-	-- COLOR SCHEMES
-	'navarasu/onedark.nvim',
+	{
+		"folke/zen-mode.nvim",
+		opts = {}
+	},
 
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+	themes
 }

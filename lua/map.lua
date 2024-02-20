@@ -19,7 +19,8 @@ require("which-key").register {
 		},
 		n = {
 			name = "Test runner / comments",
-			r = { "<cmd>Neotest run<cr>", "Run unit test" }
+			r = { "<cmd>Neotest run<cr>", "Run unit test" },
+			g = { "<cmd>Neogen<cr>", "Generate docblockr" }
 		},
 		w = { "<cmd>silent w<cr>", "save file" },
 		q = { "<cmd>q<cr>", "close editor" },

@@ -55,6 +55,7 @@ return {
 	{ "m4xshen/autoclose.nvim",  opts = {} },
 
 	"lewis6991/gitsigns.nvim",
+	"f-person/git-blame.nvim",
 
 	{
 		"kdheepak/lazygit.nvim",
@@ -106,7 +107,13 @@ return {
 
 	{ 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
 
-	'nvim-lualine/lualine.nvim',
+	{
+		"Mr-LLLLL/lualine-ext.nvim",
+		event = "VeryLazy",
+		dependencies = {
+			"nvim-lualine/lualine.nvim",
+		},
+	},
 
 	{
 		'nvim-treesitter/nvim-treesitter',
@@ -168,8 +175,11 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"antoinemadec/FixCursorHold.nvim",
+			"nvim-neotest/nvim-nio",
 			-- ADAPTERS
-			"haydenmeade/neotest-jest"
+			"haydenmeade/neotest-jest",
+			"nvim-neotest/neotest-go",
+			"olimorris/neotest-phpunit"
 		}
 	},
 
@@ -195,6 +205,26 @@ return {
 	{
 		"folke/zen-mode.nvim",
 		opts = {}
+	},
+
+	-- php
+	{
+		"gbprod/phpactor.nvim",
+		build = function()
+			require("phpactor.handler.update")() -- To install/update phpactor when installing this plugin
+		end,
+		ft = 'php',
+		dependencies = {
+			"nvim-lua/plenary.nvim", -- required to update phpactor
+			"neovim/nvim-lspconfig" -- required to automaticly register lsp serveur
+		},
+		config = function()
+			require("phpactor").setup({
+				lspconfig = {
+					enabled = false
+				}
+			})
+		end
 	},
 
 	themes

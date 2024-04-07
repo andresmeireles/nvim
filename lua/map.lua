@@ -1,3 +1,4 @@
+-- normal map definition function
 local nmap = function(map, command)
 	vim.keymap.set("n", map, command, {})
 end
@@ -12,13 +13,13 @@ require("which-key").register {
 	["<leader>"] = {
 		c = { "<cmd>Bdelete<cr>", "close buffer" },
 		b = {
-			name = "buffers",
+			name = "-> Buffers",
 			c = { "<cmd>Bdelete<cr>", "close buffer" },
 			n = { "<cmd>BufferLineCycleNext<cr>", "next" },
 			b = { "<cmd>BufferLineCyclePrev<cr>", "previous" }
 		},
 		n = {
-			name = "Test runner / comments",
+			name = "-> Test runner / comments",
 			r = { "<cmd>Neotest run<cr>", "Run unit test" },
 			g = { "<cmd>Neogen<cr>", "Generate docblockr" }
 		},
@@ -26,15 +27,17 @@ require("which-key").register {
 		q = { "<cmd>q<cr>", "close editor" },
 		e = { "<cmd>Neotree toggle<cr>", "Toggle File Explorer" },
 		f = { "<cmd>Neotree reveal_file=%:p<cr>", "Focus on explorer" },
-		-- e = { "<cmd>NvimTreeToggle<cr>", "Toggle File Explorer" },
 		t = {
 			name = "-> Terminal",
 			t = { "<cmd>ToggleTerm<cr>", "bottom" },
 			f = { "<cmd>ToggleTerm direction=float<cr>", "floating" }
 		},
 		H = { "<cmd>lua require('hlargs').toggle()<cr>", "highlight args" },
-		T = { "-> Telescope" },
-		Tf = { "<cmd>Telescope fd<cr>", "Find" },
+		T = {
+			name = "-> Telescope",
+			f = { "<cmd>Telescope fd<cr>", "Find" },
+			d = { "<cmd>Telescope live_grep<cr>", "Find text in files" }
+		},
 		lt = { "<cmd>TroubleToggle<cr>", "Show diagnostics" },
 		g = {
 			name = "-> LSP ",
@@ -51,6 +54,10 @@ require("which-key").register {
 			b = { "<cmd>Gitsigns toggle_current_line_blame<cr>", "toggle inline blame" },
 			u = { "<cmd>Gitsigns reset_hunk<cr>", "undo alteration" },
 			l = { "<cmd>LazyGit<cr>", "lazygit" },
-		}
+		},
+		v = {
+			name = "-> Visual",
+			r = { require('actions.relative_line'), "toggle relative line" }
+		},
 	},
 }

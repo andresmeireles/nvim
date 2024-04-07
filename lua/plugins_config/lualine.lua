@@ -8,28 +8,9 @@ local lsp_name = function()
   return clients[1].name
 end
 
-local all_lsps = function()
-  local clients = vim.lsp.get_active_clients()
-
-  if next(clients) == nil then
-    return ""
-  end
-
-  local lsps = "["
-
-  for k, c in pairs(clients) do
-    if k ~= 1 then
-      lsps = lsps .. " " .. c.name
-
-      if #clients ~= k then
-        lsps = lsps .. ","
-      end
-    end
-  end
-
-  lsps = lsps .. " ]"
-
-  return lsps
+-- this function only works with gitsigns installed
+local git_line_blame = function()
+  return require "gitblame".get_current_blame_text()
 end
 
 require('lualine').setup {
@@ -47,7 +28,7 @@ require('lualine').setup {
     },
     lualine_b = { 'filename', 'branch' },
     lualine_c = { 'fileformat' },
-    lualine_x = { { all_lsps } },
+    lualine_x = { { git_line_blame } },
     lualine_y = {
       {
         lsp_name,

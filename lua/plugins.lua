@@ -98,10 +98,7 @@ return {
 		},
 	},
 
-	-- "nvimtools/none-ls.nvim",
-	{ 'stevearc/conform.nvim', opts = {} },
-
-	{ 'mfussenegger/nvim-lint' },
+	"nvimtools/none-ls.nvim",
 
 	"davidmh/cspell.nvim",
 

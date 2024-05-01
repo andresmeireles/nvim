@@ -37,3 +37,10 @@ vim.opt.cursorline = true
 vim.opt.cursorcolumn = false
 
 vim.opt.termguicolors = true
+
+-- custom filetypes
+vim.filetype.add({
+	pattern = {
+		['.*%.blade%.php'] = 'blade'
+	},
+})

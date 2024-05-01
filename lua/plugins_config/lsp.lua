@@ -33,7 +33,9 @@ local servers = {
 			telemetry = { enable = false }
 		}
 	},
-
+	tailwindcss = {
+		filetypes = { "blade" }
+	},
 }
 
 local mason_lspconfig = require("mason-lspconfig")

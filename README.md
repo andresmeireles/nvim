@@ -4,26 +4,29 @@
 
 Minha configuração tem o expr habilitado, então um arquivo `.nvim.lua` na raiz do projeto pode ser usado para adicionar configurações adicionais.
 
-## Adicionar linters
+## Adicionar linters, formatters e outros.
 
-Uso o `nvim_lint` para executar linters a configuração de cada linter pode ser feita no arquivo `.nvim.lua`
+Essa configuração utiliza none-ls, substituto do null-ls. Esse pacote da acesso há varios formatadores, linters, alguns lsps até.
 
-```
-require("lint").linters_by_ft = {
-    php = {"phpcs", "linter_qualquer"},
-    go = {"linters_do_go"},
-    ....
-}
-```
+A configutação dele é feita atraves da função `setup` do arquivo `setup_linters_and_formatters` dentro do arquivo .nvim.lua na raiz do projeto.
 
-## Adicionar fomatadores
-
-Uso o `conform.nvim` para adicionar formatadores, sua aplicacao é bastante similar a adicionar linters.
-
-No arquivo '.nvim.lua' adicione o seguinte
+Exemplo de uso:
 
 ```
-require("conform").formatters_by_ft = {
-    extensao_do_arquivo = {formatadores}
-}
+local slf = require "actions.setup_linters_and_formatters"
+
+local linters = slf.linters() -- helper que busca os linters
+local formatters = slf.formatters() -- helper que buscar os formatadores
+
+slf.setup({
+    linters.phpcs.with {
+        command = "vendor/bin/phpcs"
+    },
+    formatters.pint.with {
+        command = "vendor/bin/pint"
+    },
+    formatters.blade_formatter,
+})
 ```
+
+A configuração de cada linter pode ser vista na doc do none-ls.

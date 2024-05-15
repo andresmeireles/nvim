@@ -25,20 +25,20 @@ require("which-key").register {
 		},
 		w = { "<cmd>silent w<cr>", "save file" },
 		q = { "<cmd>q<cr>", "close editor" },
-		e = { "<cmd>Neotree toggle<cr>", "Toggle File Explorer" },
-		f = { "<cmd>Neotree reveal_file=%:p<cr>", "Focus on explorer" },
+		e = { "<cmd>Neotree left reveal toggle<cr>", "Toggle File Explorer On Left" },
+		f = { "<cmd>Neotree float reveal toggle<cr>", "Toggle Float File Explorer" },
+		r = { "<cmd>Neotree reveal_file=%:p<cr>", "Reveal on explorer" },
 		t = {
 			name = "-> Terminal",
 			t = { "<cmd>ToggleTerm<cr>", "bottom" },
 			f = { "<cmd>ToggleTerm direction=float<cr>", "floating" }
 		},
-		H = { "<cmd>lua require('hlargs').toggle()<cr>", "highlight args" },
 		T = {
 			name = "-> Telescope",
 			f = { "<cmd>Telescope fd<cr>", "Find" },
 			d = { "<cmd>Telescope grep_string<cr>", "Find text in files" }
 		},
-		lt = { "<cmd>TroubleToggle<cr>", "Show diagnostics" },
+		d = { "<cmd>TroubleToggle<cr>", "Show diagnostics" },
 		g = {
 			name = "-> LSP ",
 			d = { gd, "go to definition" },

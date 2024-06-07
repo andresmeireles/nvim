@@ -3,13 +3,6 @@ local themes = require('themes')
 return {
 	{ 'akinsho/toggleterm.nvim', version = "*", config = true },
 
-	-- {
-	-- 	"nvim-tree/nvim-tree.lua",
-	-- 	dependencies = {
-	-- 		"nvim-tree/nvim-web-devicons"
-	-- 	},
-	-- },
-
 	{
 		"nvim-neo-tree/neo-tree.nvim",
 		branch = "v3.x",
@@ -63,6 +56,8 @@ return {
 			"nvim-lua/plenary.nvim"
 		}
 	},
+
+	"gpanders/editorconfig.nvim",
 
 	"tpope/vim-surround",
 

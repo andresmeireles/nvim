@@ -15,34 +15,24 @@ end
 
 require('lualine').setup {
   options = {
-    -- disabled_filetypes = { "NvimTree" },
     disabled_filetypes = { "neo-tree" },
-    -- theme = bubbles_theme,
-    theme = "jellybeans",
     component_separators = '|',
-    -- section_separators = { left = '', right = '' },
   },
   sections = {
-    lualine_a = {
-      -- { 'mode', separator = { left = '' }, right_padding = 2 },
-    },
+    lualine_a = { 'mode' },
     lualine_b = { 'filename', 'branch' },
-    lualine_c = { 'fileformat' },
+    lualine_c = { 'diagnostics', 'fileformat' },
     lualine_x = { { git_line_blame } },
     lualine_y = {
       {
         lsp_name,
         icon = ' ',
-        -- color = { fg = "#000000", gui = "bold" }
       }
     },
-    lualine_z = { 'filetype', 'progress' },
-    -- lualine_y = {
-    --   -- { 'location', separator = { right = '' }, left_padding = 2 },
-    -- },
+    lualine_z = { 'filetype', 'location', 'progress' },
   },
   inactive_sections = {
-    lualine_a = { 'filename' },
+    lualine_a = { },
     lualine_b = {},
     lualine_c = {},
     lualine_x = {},

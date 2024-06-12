@@ -38,7 +38,7 @@ require("which-key").register {
 			f = { "<cmd>Telescope fd<cr>", "Find" },
 			d = { "<cmd>Telescope live_grep<cr>", "Find text in files" }
 		},
-		d = { "<cmd>TroubleToggle<cr>", "Show diagnostics" },
+		d = { "<cmd>Trouble diagnostics<cr>", "Show diagnostics" },
 		g = {
 			name = "-> LSP ",
 			d = { gd, "go to definition" },

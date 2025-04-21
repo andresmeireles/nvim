@@ -13,6 +13,9 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
+-- General config for maps, spacing etc
+require("config")
+
 require("lazy").setup({
   spec = {
     { import = "plugins" }
@@ -20,8 +23,6 @@ require("lazy").setup({
   checker = { enabled = true }
 })
 
--- General config for maps, spacing etc
-require("config")
 
 -- plugins configuration
 require("plugins_config")

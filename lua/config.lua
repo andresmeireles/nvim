@@ -8,7 +8,7 @@ vim.wo.number = true
 -- enable mouse
 vim.o.mouse = 'a'
 
--- Sync clipboard between OS and neovim, they will share the clipboard
+-- Sync clipboard between OS and neovim, they will share the same clipboard
 vim.o.clipboard = 'unnamedplus'
 vim.wo.signcolumn = 'yes'
 

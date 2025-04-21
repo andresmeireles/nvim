@@ -37,8 +37,6 @@ return {
 		}
 	},
 
-	"folke/which-key.nvim",
-
 	'famiu/bufdelete.nvim',
 
 	"tpope/vim-sleuth",
@@ -56,10 +54,6 @@ return {
 			"nvim-lua/plenary.nvim"
 		}
 	},
-
-	"gpanders/editorconfig.nvim",
-
-	"tpope/vim-surround",
 
 	{
 		"folke/trouble.nvim",
@@ -105,25 +99,6 @@ return {
 		dependencies = {
 			"nvim-lualine/lualine.nvim",
 		},
-	},
-
-	{
-		'nvim-treesitter/nvim-treesitter',
-		dependencies = {
-			'nvim-treesitter/nvim-treesitter-textobjects',
-		},
-		build = ':TSUpdate',
-	},
-
-	{
-		"echasnovski/mini.cursorword",
-		version = '*',
-		opts = {}
-	},
-
-	{
-		"NvChad/nvim-colorizer.lua",
-		opts = {}
 	},
 
 	{
@@ -197,26 +172,6 @@ return {
 	{
 		"folke/zen-mode.nvim",
 		opts = {}
-	},
-
-	-- php
-	{
-		"gbprod/phpactor.nvim",
-		build = function()
-			require("phpactor.handler.update")() -- To install/update phpactor when installing this plugin
-		end,
-		ft = 'php',
-		dependencies = {
-			"nvim-lua/plenary.nvim", -- required to update phpactor
-			"neovim/nvim-lspconfig" -- required to automaticly register lsp serveur
-		},
-		config = function()
-			require("phpactor").setup({
-				lspconfig = {
-					enabled = false
-				}
-			})
-		end
 	},
 
 	themes

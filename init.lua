@@ -13,13 +13,15 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup(require("plugins"), {})
+require("lazy").setup({
+  spec = {
+    { import = "plugins" }
+  },
+  checker = { enabled = true }
+})
 
 -- General config for maps, spacing etc
 require("config")
-
--- mappings
-require("map")
 
 -- plugins configuration
 require("plugins_config")
